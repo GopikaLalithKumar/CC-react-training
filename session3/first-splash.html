@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     
+       <title>First Splash</title>
+       
+    </head>
+    <body>
+
+<div id="container">      
+    <h1> Number guessing game </h1>
+    <hr>
+        <p>We have selected a random number between 1 and 100.<br>See if you can guess it in 10 turns or fewer.<br> We'll tell you if your guess was too high or too low.<br></p>
+        <p id="outputtext"> Enter a number below </p>
+      
+      <input type="text" id="userInput">
+   <button onclick="submit()">submit</button>
+</div>
+<script>
+    let output = document.getElementById('outputtext');
+    let number = [Math.floor(Math.random() * 100)]
+    function submit() {
+        let input = document.getElementById('userInput').value;
+  if(input == number)
+  {
+    output.innerHTML = "you guessed right number..!!!"
+  }
+  else if(input < number)
+  {
+    output.innerHTML = "you guessed too low"
+  }
+ if(input> number)
+  {
+    output.innerHTML = "you guessed too high"
+  }
+    }
+</script>
+
+    </body>
+</html>
