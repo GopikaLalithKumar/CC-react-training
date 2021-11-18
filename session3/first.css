@@ -1,0 +1,23 @@
+body{
+background-color: palegreen;
+}
+#container {
+    background-color: black;
+    border: 5px solid white;
+    height:275px;
+    width:750px;
+    margin: auto;
+    text-align:center;
+}
+
+p{
+    color:white;
+    font-size: 24px;
+}
+#input {
+    width:100px;
+    margin:25px auto;
+}
+#submit{
+    margin:25px auto auto 0;
+}
