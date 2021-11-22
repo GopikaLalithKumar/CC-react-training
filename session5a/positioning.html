@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            static positioning
+        </title>
+        <script>
+            documenet.addEventListener("DOMContentLoaded",function(){
+                function createParagraph()
+                {
+                    let para=document.createElement("p");
+                    para.textContent="you clicked the button.!!";
+                    document.body.appendChild(para);
+                }
+                const buttons=document.querySelectorAll("button");
+                for(let i=0;i<buttons.length;i++){}
+                buttons[i].addEventListener("click",createParagraph);
+            }
+            })
+        </script>
+        <style>
+            body{
+                width:500px;
+                margin:0 auto;
+            }
+            p{
+                background: antiquewhite;
+                border:3px solid blue;
+                padding:10px; margin:10px; 
+            }
+            span{background:red;
+            border: 1px;
+        }
+        .positioned{
+            background: yellowgreen;
+        }
+        </style>
+    </head>
+    <body>
+        <h1> Static Position</h1>
+        <p>
+            A block-level element is an HTML element that takes up the full width of the element that contains it</p>
+            <p class="positioned">Because block-level elements take up all of the width available to them, they stack on top of each other.</p>
+            <p> An inline element is an HTML element that only takes up the width that its content takes up</p>
+            <p>element functions much like the div element, but for inline elements, rather than block-level.<span>example, imagine that you wanted to group some of the words in one of your p elements, but not all of them. </span>Because a div element is block-level, it would not be suited to that task
+      <img src="long.jpg"/>
+        </p>
+    </body>
+</html>
