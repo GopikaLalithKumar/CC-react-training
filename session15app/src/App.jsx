@@ -1,10 +1,11 @@
 import "./App.css";
 import List from "./components/List";
+
 import InputWithLabel from "./components/InputWithLabel";
 import useSemiPersistentState from "./hooks/useSemiPersistentState";
 import { useEffect, useReducer } from "react";
 
-const storiesReducer = (state: any, action: any) => {
+const storiesReducer = (state, action) => {
   switch (action.type) {
     case "FETCH_INIT":
       return { ...state, isLoading: true, isError: false };
@@ -12,7 +13,7 @@ const storiesReducer = (state: any, action: any) => {
       return { data: action.payload, isLoading: false, isError: false };
     case "REMOVE_STORY": {
       const showStories = state.data.filter(
-        (item: any) => item.objectID !== action.payload
+        (item) => item.objectID !== action.payload
       );
       return { data: showStories, isLoading: false, isError: false };
     }
@@ -33,7 +34,7 @@ function App() {
     isError: false,
   });
 
-  const handleSearchChange = (e: any) => {
+  const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
@@ -41,7 +42,7 @@ function App() {
     dispatchStories({ type: "FETCH_INIT" });
     fetch(API_ENDPOINT + searchTerm)
       .then((res) => res.json())
-      .then((result: any) => {
+      .then((result) => {
         dispatchStories({ type: "SET_STORIES", payload: result.hits });
       })
       .catch((e) => {
@@ -50,7 +51,7 @@ function App() {
       });
   }, [searchTerm]);
 
-  const handleRemoveStory = (id: any) => {
+  const handleRemoveStory = (id) => {
     dispatchStories({ type: "REMOVE_STORY", payload: id });
   };
 
