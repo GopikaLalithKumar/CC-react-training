@@ -1,0 +1,29 @@
+.container {
+  padding: 3rem;
+}
+
+.tableHeader > span {
+  font-weight: bold;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+input {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.submitButton {
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+}
+
+.disButton:hover {
+  cursor: not-allowed;
+}
