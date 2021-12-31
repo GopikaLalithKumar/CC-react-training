@@ -1,5 +1,5 @@
 import { memo } from "react";
-import styles from "./Listmodule.css";
+import styles from "./List.module.css";
 
 type Story = {
   title: string;
